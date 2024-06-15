@@ -1,3 +1,5 @@
+# Sorbet Cafe's Better Prefixes
+
 Tweak weapon and accessory prefixes based on Sorbet Cafe's video, 'The Problem with Reforges' (https://www.youtube.com/watch?v=UBfoOkhV2vY)
 
 - Overhauls weapon prefixes as detailed in that video (most positive prefixes rebalanced)

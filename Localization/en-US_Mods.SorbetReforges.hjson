@@ -1,0 +1,26 @@
+Prefixes: {
+	Ethereal.DisplayName: Ethereal
+	Accurate.DisplayName: Accurate
+	Attuned.DisplayName: Attuned
+	Focused.DisplayName: Focused
+	Spellbound.DisplayName: Spellbound
+	Legendary.DisplayName: Legendary
+	Mythical.DisplayName: Mythical
+	Unreal.DisplayName: Unreal
+}
+
+Configs: {
+	ShouldEnable: {
+		DisplayName: Rare Prefix Config
+
+		EnableRarePrefixes: {
+			Label: Enable Rare Prefixes
+			Tooltip: Whether to enable the prefixes Legendary, Unreal, and Mythical. Enabled by default.
+		}
+
+		RarePrefixRelativeChance: {
+			Label: Rare Prefix Chance
+			Tooltip: Likelihood for an item to receive a rare prefix, relative to any other prefix.\nDefault: 0.05; 5% as likely as any other prefix.
+		}
+	}
+}

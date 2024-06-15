@@ -1,0 +1,3 @@
+displayName = Sorbet Cafe's Better Prefixes
+author = Starwort
+version = 0.1

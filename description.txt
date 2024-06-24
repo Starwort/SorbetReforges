@@ -6,3 +6,5 @@ Tweak weapon and accessory prefixes based on Sorbet Cafe's video, 'The Problem w
 - Melee speed prefixes (Wild and upgrades) have twice as much effect to counteract the bad scaling of melee speed
 - Movement speed prefixes (Brisk and upgrades) now modify the same stats that Magiluminescence modifies
 - Arcane now provides +15 mana, -3% mana cost; three other prefixes (Attuned, +5 mana, -1% mana cost; Ethereal, +10 mana, -2% mana cost; Spellbound, +20 mana, -4% mana cost) have been added alongside it
+
+GitHub page for issues/enhancement requests: https://github.com/Starwort/SorbetReforges

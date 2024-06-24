@@ -1,3 +1,5 @@
 displayName = Sorbet Cafe's Better Prefixes
 author = Starwort
-version = 1.0
+version = 1.1
+includeSource = true
+homepage = https://github.com/Starwort/SorbetReforges

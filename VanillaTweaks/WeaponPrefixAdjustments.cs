@@ -30,7 +30,7 @@ namespace SorbetReforges.VanillaTweaks {
             {PrefixID.Demonic, (1.05f, 1f, 1f, 1f, 1f, 1f, 15)},
             {PrefixID.Zealous, (1f, 1f, 1f, 1f, 1f, 1f, 18)},
             // Common
-            {PrefixID.Quick, (1f, 1f, 1.15f, 1f, 1f, 1f, 0)},
+            {PrefixID.Quick, (1f, 1f, 0.85f, 1f, 1f, 1f, 0)},
             {PrefixID.Agile, (1f, 1f, 0.9f, 1f, 1f, 1f, 7)},
             {PrefixID.Murderous, (1.07f, 1f, 0.94f, 1f, 1f, 1f, 5)},
             {PrefixID.Nasty, (1.15f, 0.9f, 0.85f, 1f, 1f, 1f, -15)},

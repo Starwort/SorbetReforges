@@ -14,18 +14,18 @@ namespace SorbetReforges.VanillaTweaks {
             float modifier;
             switch (item.prefix) {
                 case PrefixID.Wild:
-                    modifier = 0.98f;
+                    modifier = 0.02f;
                     goto UpdateTooltip;
                 case PrefixID.Rash:
-                    modifier = 0.96f;
+                    modifier = 0.04f;
                     goto UpdateTooltip;
                 case PrefixID.Intrepid:
-                    modifier = 0.94f;
+                    modifier = 0.06f;
                     goto UpdateTooltip;
                 case PrefixID.Violent:
-                    modifier = 0.92f;
+                    modifier = 0.08f;
                 UpdateTooltip:
-                    self.GetAttackSpeed(DamageClass.Melee) *= modifier;
+                    self.GetAttackSpeed(DamageClass.Melee) += modifier;
                     break;
                 default:
                     orig(self, item);

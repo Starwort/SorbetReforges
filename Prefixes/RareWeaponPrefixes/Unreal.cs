@@ -1,5 +1,4 @@
-using Terraria;
-using Terraria.Localization;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace SorbetReforges.Prefixes.RareWeaponPrefixes {
@@ -34,26 +33,6 @@ namespace SorbetReforges.Prefixes.RareWeaponPrefixes {
 
         public override float RollChance(Item item) {
             return ModContent.GetInstance<ShouldEnable>().RarePrefixRelativeChance;
-        }
-
-        static TooltipLine[] lines = null!;
-        public override void Load() {
-            static TooltipLine line(string what, string text) {
-                return new TooltipLine(SorbetReforges.Instance, "Prefix" + what, text) {
-                    IsModifier = true
-                };
-            }
-            lines = [
-                line("Damage",$"+20{Language.GetText("LegacyTooltip.39")}"),
-                line("Speed",$"+10{Language.GetText("LegacyTooltip.40")}"),
-                line("CritChance",$"+7{Language.GetText("LegacyTooltip.41")}"),
-                line("ShootSpeed",$"+10{Language.GetText("LegacyTooltip.44")}"),
-                line("Knockback",$"+15{Language.GetText("LegacyTooltip.45")}"),
-            ];
-        }
-
-        public override IEnumerable<TooltipLine> GetTooltipLines(Item item) {
-            return lines;
         }
     }
 }

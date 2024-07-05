@@ -10,7 +10,7 @@ namespace SorbetReforges.Prefixes.RareWeaponPrefixes {
             valueMult *= 3.0985f;
         }
 
-        public override PrefixCategory Category => PrefixCategory.Melee;
+        public override PrefixCategory Category => PrefixCategory.Ranged;
 
         public override void SetStats(
             ref float damageMult, 

@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SorbetReforges.Prefixes.RareWeaponPrefixes {
     internal class Unreal : ModPrefix {

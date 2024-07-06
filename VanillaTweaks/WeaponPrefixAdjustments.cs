@@ -11,7 +11,7 @@ namespace SorbetReforges.VanillaTweaks {
             On_Item.TryGetPrefixStatMultipliersForItem += modify;
         }
 
-        static Dictionary<int, (
+        static readonly Dictionary<int, (
             float damage,
             float knockback,
             float useTime,
@@ -104,44 +104,8 @@ namespace SorbetReforges.VanillaTweaks {
         }
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips) {
-            if (prefixValues.TryGetValue(item.prefix, out var data)) {
-                foreach (var line in tooltips) {
-                    if (line.Name == "PrefixDamage") {
-                        line.Text = $"{data.damage * 100 - 100:+#;-#}{Language.GetText("LegacyTooltip.39")}";
-                        line.IsModifier = true;
-                        line.IsModifierBad = data.damage < 1f;
-                    }
-                    if (line.Name == "PrefixSpeed") {
-                        line.Text = $"{100 - data.useTime * 100:+#;-#}{Language.GetText("LegacyTooltip.40")}";
-                        line.IsModifier = true;
-                        line.IsModifierBad = data.useTime > 1f;
-                    }
-                    if (line.Name == "PrefixCritChance") {
-                        line.Text = $"{data.critChance:+#;-#}{Language.GetText("LegacyTooltip.41")}";
-                        line.IsModifier = true;
-                        line.IsModifierBad = data.critChance < 0;
-                    }
-                    if (line.Name == "PrefixUseMana") {
-                        line.Text = $"{data.manaCost * 100 - 100:+#;-#}{Language.GetText("LegacyTooltip.42")}";
-                        line.IsModifier = true;
-                        line.IsModifierBad = data.manaCost > 1f;
-                    }
-                    if (line.Name == "PrefixSize") {
-                        line.Text = $"{data.size * 100 - 100:+#;-#}{Language.GetText("LegacyTooltip.43")}";
-                        line.IsModifier = true;
-                        line.IsModifierBad = data.size < 1f;
-                    }
-                    if (line.Name == "PrefixShootSpeed") {
-                        line.Text = $"{data.shotVelocity * 100 - 100:+#;-#}{Language.GetText("LegacyTooltip.44")}";
-                        line.IsModifier = true;
-                        line.IsModifierBad = data.shotVelocity < 1f;
-                    }
-                    if (line.Name == "PrefixKnockback") {
-                        line.Text = $"{data.knockback * 100 - 100:+#;-#}{Language.GetText("LegacyTooltip.45")}";
-                        line.IsModifier = true;
-                        line.IsModifierBad = data.knockback < 1f;
-                    }
-                }
+            if (prefixValues.ContainsKey(item.prefix)) {
+                item.RebuildTooltip();
             }
         }
     }

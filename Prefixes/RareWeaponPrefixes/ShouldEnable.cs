@@ -2,15 +2,20 @@
 using Terraria.ModLoader.Config;
 
 namespace SorbetReforges.Prefixes.RareWeaponPrefixes {
-    internal class ShouldEnable : ModConfig {
+    public class ShouldEnable : ModConfig {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
         [DefaultValue(true)]
         public bool EnableRarePrefixes;
 
-        [Range(0.01f, 1f)]
-        [Increment(0.01f)]
-        [DefaultValue(0.05f)]
-        public float RarePrefixRelativeChance;
+        internal float RarePrefixRelativeChance;
+
+        [Range(1, 100)]
+        [Slider]
+        [DefaultValue(5)]
+        public int RarePrefixRelativeChanceNew {
+            get => (int) (RarePrefixRelativeChance * 100 + 0.999);
+            set => RarePrefixRelativeChance = (float) value / 100f;
+        }
     }
 }
